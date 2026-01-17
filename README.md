@@ -23,3 +23,9 @@ python report/compare_gatecounts.py
 - Edit `sagemaker/src/train.py`.
 - Set your role & bucket in `sagemaker/deploy_stub.py` (or env vars `SM_ROLE_ARN`, `SM_BUCKET`).
 - Run from a SageMaker Notebook or a local env with AWS creds.
+
+### 3) Shor algorithm
+
+### 4) B-trees
+
+### 5) AWS training example
