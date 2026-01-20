@@ -2,14 +2,15 @@ from qiskit import QuantumCircuit, transpile
 from qiskit_aer import AerSimulator
 import pandas as pd
 
-def base_circuit(n=5):
+def base_circuit(n):
     qc = QuantumCircuit(n)
     qc.h(0)
     for i in range(n-1):
         qc.cx(i, i+1)
     return qc
 
-qc = base_circuit(5)
+n = 5
+qc = base_circuit(n)
 backend = AerSimulator()
 
 t_ibm = transpile(qc, backend, basis_gates=['rz','sx','x','cx'], optimization_level=3,
