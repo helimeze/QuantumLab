@@ -25,4 +25,4 @@ def predict_fn(input_data, model):
         return probs.numpy().tolist()
 
 def output_fn(prediction, accept="application/json"):
-    return json.dumps({"probs": prediction}), accept
+    return json.dumps({"probabilities": prediction}), accept
